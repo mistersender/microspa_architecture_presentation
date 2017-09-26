@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Ems Example</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+    <script src="../jquery.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <header class="o-wrapper">
+      <h1>Ems Are Awesome</h1>
+    </header>
+    <main class="o-wrapper">
+      <h2>Why?</h2>
+      <ul>
+        <li>Scale's to a users's preferences</li>
+        <li>Smaller media queries (update font-size only)</li>
+        <li>w3 reccommended!</li>
+        <li>With pixels, we would have a mess to fix as we scaled</li>
+      </ul>
+      <h3>Play with it!</h3>
+      <p>The whole site updates when the font-size updates- try it out<p>
+      <input type="number" name="fontSize" value="14" maxlength="2">px
+      <h4>Notice the footer?</h4>
+      <p>It's always at the bottom, thanks to <code>calc()</code> & <code>vh</code></p>
+    </main>
+    <footer class="o-wrapper">
+      &copy; 2016 Jessica Kennedy
+    </footer>
+    <script>
+    $(document).on('ready', function(){
+      var $html = $('html'); console.log($html[0])
+      $('input[name=fontSize]').on('change', function(e){console.log(this.value)
+        $html.css('font-size', this.value + 'px');
+      })
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+@import "non-flex-styles.css";
+main {
+  display: flex;
+  flex-flow: row wrap;
+}
+.sidebar {
+  flex: 100%;
+  display: flex;
+}
+.setting2 .sidebar{
+  order: 2;
+}
+.sidebar__link {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article {
+  flex: 100%;
+}
+.setting2 .article{
+  order: 1;
+}
+@media ( min-width: 768px ) {
+  main {
+    flex-flow: row wrap;
+  }
+  .sidebar {
+    flex: 0 0 10em;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+  }
+  .sidebar__link {
+    text-align: left;
+    justify-content: flex-start;
+    flex: 0;
+  }
+  .article {
+    flex: 1 1 0;
+  }
+}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Ems Example</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='styles.css' rel='stylesheet' type='text/css'>
+    <script src="../jquery.min.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <header class="o-wrapper">
+      <h1>Flexbox is Awesome</h1>
+    </header>
+    <main class="o-wrapper js-setting-adder">
+      <nav class="sidebar">
+        <a href="#" class="sidebar__link js-switch-setting" data-setting="setting1">Try Setting 1</a>
+        <a href="#" class="sidebar__link js-switch-setting" data-setting="setting2">Try Setting 2</a>
+        <a href="#" class="sidebar__link js-add-link">Add Links</a>
+      </nav>
+      <article class="o-wrapper why article">
+        <h4>Why?</h4>
+        <ul>
+          <li>Make grids</li>
+          <li>Make equal height columns</li>
+          <li>Vertically center all the things!</li>
+          <li>Rearrange the page</li>
+        </ul>
+        <p>Watch the navbar, try adding links & rearranging the page.</p>
+        <figure class="image">
+          <img src="flexbox.jpg" alt="spongebob endorses flexbox">
+        </figure>
+      </article>
+    </main>
+    <footer class="o-wrapper">
+      &copy; 2016 Jessica Kennedy
+    </footer>
+    <script>
+    $(document).on('ready', function(){
+      var $setting = $('.js-setting-adder');
+      $setting
+        .on('click', '.js-switch-setting', function(e){
+          e.preventDefault();
+          $setting.removeClass("setting1 setting2").addClass($(this).data('setting'));
+        })
+        .on('click', '.js-add-link', function(e){
+          e.preventDefault();
+          var $obj = $(this);
+          $obj.after($obj.clone());
+        })
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+@import "../normalize.css";
+
+body {
+  font-size: 1rem;
+}
+body, html {
+  font-family: lato, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* {
+  transition: padding .2s ease;
+}
+h1, h2, h3, h4, h5, h6 {
+  padding: .8em 0;
+  margin: 0;
+}
+h1 {
+  font-size: 2.5em;
+  padding: 0;
+}
+h2 {
+  font-size: 2.1em;
+}
+h3 {
+  font-size: 1.8em;
+}
+h4 {
+  font-size: 1.5em;
+}
+code {
+  border: 1px solid #f66;
+  border-radius: 2px;
+  color: #f66;
+  padding: .2em;
+  background: #fee;
+}
+header{
+  border-bottom: 1px solid #333;
+}
+main {
+  min-height: calc(100vh - 10em);
+}
+footer {
+  border-top: 1px solid #333;
+  background: #333;
+  text-align: center;
+  color: #999;
+  font-size: .9em;
+  padding-bottom: 3em;
+}
+.o-wrapper {
+  padding: 1em .5em;
+}
+
+@media ( min-width: 568px ) {
+  html{
+    font-size: 1.3em;
+  }
+  .o-wrapper {
+    padding: 1em 2em;
+  }
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>MicroSPA Architecture - The Journey so Far</title>
+
+		<meta name="author" content="Jessica Kennedy">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+        <section>
+          <p>This slide intentionally left blank.</p>
+          <aside class="notes">
+            turn off hot corners!<br>
+          </aside>
+        </section>
+
+				<section>
+					<h1>MicroSPA Architecture</h1>
+					<h3>The Journey so Far</h3>
+					<p>
+						<small>Created by <a href="http://mistersender.com">Jessica Kennedy</a> / <a href="http://twitter.com/mistersender">@mistersender</a></small>
+					</p>
+				</section>
+        <!-- Examples because lazy:
+          <p><code class="il">320px</code> is your new "base" size.</p>
+          <p class="fragment">This: <code class="il">@media ( min-width: 568px ) {}</code></p>
+        -->
+				<section class='c-grid'>
+          <div>
+            <figure class="c-me" style="background-image: url(images/me.jpg)">
+              Me, Jessica Kennedy!
+            </figure>
+          </div>
+          <div style = 'flex: calc(100% - 300px)'>
+  					<h2>Who am I?</h2>
+  					<ul>
+  						<li>Senior Software Engineer</li>
+  						<li>10 Years + Development</li>
+  						<li>Polyglot org using MicroSPAs for ~2 years</li>
+  					</ul>
+          </div>
+				</section>
+<!-- what we'll cover? -->
+
+<!-- definitions -->
+				<section>
+					<h1>Let's Talk Vernacular</h1>
+				</section>
+        <section>
+          <h1>SPA</h1>
+          <h3>Single-Page Application</h3>
+          <p>(Typically uses a JS framework)</p>
+        </section>
+        <section>
+          <h1>Monolith</h1>
+          <h3>Single, large code base.</h3>
+          <aside class="notes">
+            * a single large code base (or potentially 2-3 code bases for MVCs etc) that control all of the code for a site (or sites).
+            * typically have a lot of shared components
+            * once a monolith is learned, it's typically super fast to code in
+          </aside>
+        </section>
+        <section>
+          <h1>Micro SPA</h1>
+          <ul>
+            <li class="fragment">Code base broken out into separate, distinct pieces</li>
+            <li class="fragment">Performs a single task</li>
+            <li class="fragment">Intended to work as part of a whole website, but can stand alone.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Comparing MicroSPAs to Monoliths</h1>
+          <p>Using a generic E-Commerce site</p>
+        </section>
+        <section>
+          <h2>Monolith Repos:</h2>
+          <ul>
+            <li>widgets_galore</li>
+          </ul>
+        </section>
+        <section>
+          <h2>MicroSPA Repos:</h2>
+          <ul>
+            <li>widgets_galore_portal</li>
+            <li>home_page</li>
+            <li>sales_landing_page</li>
+            <li>search</li>
+            <li>checkout</li>
+            <li>my_account</li>
+            <li>update_user_info</li>
+          </ul>
+          <aside class="notes">
+            <p>can reuse my_account etc on other portals</p>
+            <p>portal is a wrapper for the site.</p>
+          </aside>
+        </section>
+
+
+
+
+<!-- final slides -->
+        <section class="inmar">
+          <div class="c-grid">
+            <div>
+              <img src="images/inmar/logo.png" alt="inmar">
+              <h4>Intelligent Commerce</h4>
+              <p>Billions transactions and shopper engagements flow through our systems. For over 35 years, Inmar has been the leader in North America for managing promotional dollars, loyalty and shopper engagement; logistics and supply chain; and healthcare and pharmaceuticals.</p>
+              <p>We employ the best engineers across North America and the world to work on rich web and mobile applications, big data and real-time analytics, embedded and RF logistics for supply chain and warehouses, and more. If you think you have what it takes, apply to join the team!</p>
+            </div>
+            <div>
+              <!-- intentionally blank for bg to appear-->
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+          <p>Twitter/Github:</p>
+          <p>@mistersender</p>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,26 @@
+@import "../ems/styles.css";
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+.sidebar {
+  background: #ecb;
+}
+.sidebar__link {
+ display: inline-block;
+ padding: .8em .3em;
+ text-decoration: none;
+ color: currentColor;
+}
+.sidebar__link:hover{
+  background: #cbf;
+}
+.why {
+  background: #bce;
+}
