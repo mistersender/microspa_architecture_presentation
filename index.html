@@ -96,9 +96,9 @@
         <section>
           <h1>Micro SPA</h1>
           <ul>
+            <li class="fragment">Performs a singular business purpose</li>
             <li class="fragment">Code base broken out into separate, distinct pieces</li>
-            <li class="fragment">Performs a single task</li>
-            <li class="fragment">Intended to work as part of a whole website, but can stand alone.</li>
+            <li class="fragment">Intended to work as part of a whole business solution, but can stand alone.</li>
           </ul>
         </section>
 
@@ -126,6 +126,8 @@
           <aside class="notes">
             <p>can reuse my_account etc on other portals</p>
             <p>portal is a wrapper for the site.</p>
+            <p>and more intricate processes (like Cart) can be further deliniated into more MicroSPAs. </p>
+            <p>As much segregation as it makes sense to manage / the domain complexity requires.</p>
           </aside>
         </section>
 
@@ -170,30 +172,48 @@
           </ul>
         </section> -->
         <section>
-          <h2>Quick, painless deploy process</h2>
-          <h4>Little to no coordination</h4>
+          <h2>Domain Understanding over Abstraction</h2>
+          <p>Code is Replaceable.</p>
+          <aside class="notes">
+            <p>if code is replaceable,
+            we can <strong>focus on the problem,</strong>
+            not agonize over code perfection.</p>
+          </aside>
         </section>
         <section>
-          <h2>No need for complex git methodologies<h2>
-          <h4>Merge conflicts rare</h4>
+          <h2>Engineers focus on the Problem</h2>
+          <p>Not becoming framework experts</p>
+          <aside class="notes">
+            enables engineers to understand the domain better.
+          </aside>
         </section>
         <section>
-          <h2>Site upgrades can be done in chunks (or swarmed)</h2>
+          <h2>Removes excuses for code abstractions</h2>
+          <p><strike>"Angular is hard. The Sr. Engineers will fix it."</strike></p>
         </section>
         <section>
-          <h2>Learning curve to start is lower<h2>
+          <h2>Don't have to agonize over code decisions</h2>
+          <div class="c-grid">
+            <ul>
+              <li>Frameworks?</li>
+              <li>Libraries?</li>
+              <li>Design patterns?</li>
+              <li>Preprocessors?</li>
+              <li>Build Processes?</li>
+            </ul>
+            <div>
+              <img src="images/why_not_both.jpg">
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2>Learning curve to start is lower</h2>
           <p>but requires agile engineers</p>
-        </section>
-        <section>
-          <h2>Specialization</h2>
-          <p>Easier to own areas</p>
-        </section>
-        <section>
-          <h2>Don't have to agonize over framework decisions</h2>
         </section>
         <section>
           <h2>Encourages Expiramentation</h2>
           <p>Low-impact to try something in one MicroSPA</p>
+          <p>Hedges against stagnation and over-complicated internal frameworks</p>
           <aside class="notes">
             LOVE THIS
           </aside>
@@ -213,8 +233,197 @@
           <h2>Attracts Great Talent</h2>
           <p>Offering a polyglot environment & freedom</p>
         </section>
+        <section>
+          <h2>Still Retain Best-Practices</h2>
+          <p>We're not animals, after all</p>
+        </section>
+        <section>
+          <h2>Site upgrades can be done in chunks</h2>
+          <p>Or swarmed. Or not at all!</p>
+        </section>
+        <section>
+          <h2>Rewrites can be done in chunks</h2>
+          <p>Or Swarmed, or not at all!</p>
+          <aside class="notes">
+            sound familiar?
+          </aside>
+        </section>
+        <section>
+          <h2>Reinforces a backwards-compatible / graceful failure mindset</h2>
+          <p>for any shared tooling among MicroSPAs</p>
+        </section>
+        <section>
+          <h2>Quick, painless deploy process</h2>
+          <h4>Little to no coordination</h4>
+        </section>
+        <section>
+          <h2>No need for complex git methodologies<h2>
+          <h4>Merge conflicts rare</h4>
+        </section>
+        <section>
+          <h2>Specialization</h2>
+          <p>Easier to own areas</p>
+        </section>
 
-
+<!-- Pain points -->
+        <section>
+          <h1>The Pain Points</h1>
+          <h4>What We have not :heart:ed...</h4>
+        </section>
+        <section>
+          <h2>Adds Overhead</h2>
+          <p>(To the first iteration)</p>
+          <aside class="notes">
+            new tech takes a sec to figure out
+          </aside>
+        </section>
+        <section>
+          <h2>Tooling & OOTB Solutions are Rare</h2>
+        </section>
+        <section>
+          <h2>Different Problems</h2>
+          <p>Adapting to the new problems is challenging</p>
+          <aside class="notes">
+            <p>eg: not abstracting everything.</p>
+            <p>owning some code repetition</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Component Upgrades</h2>
+          <aside class="notes">
+            <p>* locating them all</p>
+            <p>* reliably testing them</p>
+            <p>* possibly different implementations everywhere</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Context Switching</h2>
+          <p>can be rough</p>
+          <aside class="notes">
+            GoTemplates to Vue.js to angular in a day... whew
+          </aside>
+        </section>
+<!-- Nuts & Bolts -->
+        <section>
+          <h1>Getting Started</h1>
+        </section>
+        <section>
+          <h2>Build Something!</h2>
+        </section>
+        <section>
+          <h3>1. Pick a domain problem.</h3>
+        </section>
+        <section>
+          <h3>2. Build a simple spa around it.</h3>
+        </section>
+        <section>
+          <h3>3. Repeat.</h3>
+        </section>
+        <section>
+          <h3>Train yourself to <b>NOT</b> abstract immediately.</h3>
+          <p>The more astracted, the less likely to be agile.</p>
+        </section>
+        <section>
+          <h3>What did you repeat?</h3>
+          <ul>
+            <li>Will it make the solution cohesive?</li>
+            <li>How difficult is this to recreate?</li>
+          </ul>
+          <p>Those are candiates to abstract.</p>
+        </section>
+        <section>
+          <h3>Common Abstraction Candiates:</h3>
+          <ul>
+            <li>CSS</li>
+            <li>Navigation</li>
+            <li>Headers/Footers</li>
+          </ul>
+        </section>
+<!-- Our solution -->
+        <section>
+          <h1>Our Solution</h1>
+          <p>As an example</p>
+        </section>
+        <section>
+          <h2>Requirements</h2>
+          <ol>
+            <li class="fragment">Standalone Application</li>
+            <li class="fragment">Also works as part of a large application ("portal")</li>
+            <li class="fragment">Able to be reused in multiple "portals"</li>
+            <li class="fragment">Support ephemeral environment development</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Shared Components</h2>
+          <p>Most MocroSPAs are required to contain these components:</p>
+          <ul>
+            <li>Navbar</li>
+            <li>Stylesheet</li>
+            <li>Login</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Component Requirements</h3>
+          <ul>
+            <li>Typically Vanilla JS</li>
+            <li>Namespaced</li>
+            <li>Accepts configurations, especially of URLs</li>
+          </ul>
+        </section>
+        <section>
+          <h2>MicroSPA Requirements</h2>
+          <ul>
+            <li>Single Point of Entry for JS</li>
+            <li><code class="il">config.json</code> at MicroSPA root</li>
+            <li>Inherits parent MicroSPA's <code class="il">config.json</code> by default</li>
+            <li>Generic <code class="il">build</code> file at site root</li>
+          </ul>
+          <aside class="notes">
+            <p>Other patterns besides SPE:</p>
+            <ul>
+              <li>using module loaders</li>
+              <li>dynamic loading of assets</li>
+              <li>prioritizing scripts</li>
+              <li>async-aware script initializers</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h2>Build Process</h2>
+          <ul>
+            <li>Cloudformation file</li>
+            <li>build file</li>
+            <li>minimal, but powerful deployment tooling</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Working Together</h2>
+          <ul>
+            <li><b>Turbolinks</b> for smooth transitions</li>
+            <li><b>Consul</b> keys for URL rewrites</li>
+            <li>Shared parent config file</li>
+          </ul>
+        </section>
+<!-- To solve -->
+        <section>
+          <h1>Problems to Solve</h1>
+        </section>
+        <section>
+          <h2>Big file sizes</h2>
+        </section>
+        <section>
+          <h2>Look & Feel Derails Easily</h2>
+        </section>
+        <section>
+          <h2>Communicating between SPAs</h2>
+          <aside class="notes">
+            knowing what portal each spa is in and redirecting appropriately
+          </aside>
+        </section>
+        <section>
+          <h2>Forget to test in Portals</h2>
+          <p>Because they can be standalone</p>
+        </section>
 
 <!-- final slides -->
         <section class="inmar">
