@@ -74,46 +74,52 @@
           </div>
 				</section>
 <!-- what we'll cover? -->
-
-<!-- definitions -->
-				<section>
-					<h1>Let's Talk Vernacular</h1>
-				</section>
         <section>
-          <h1>SPA</h1>
-          <h3>Single-Page Application</h3>
-          <p>(Typically uses a JS framework)</p>
-        </section>
-        <section>
-          <h1>Monolith</h1>
-          <h3>Single, large code base.</h3>
-          <aside class="notes">
-            * a single large code base (or potentially 2-3 code bases for MVCs etc) that control all of the code for a site (or sites).
-            * typically have a lot of shared components
-            * once a monolith is learned, it's typically super fast to code in
-          </aside>
-        </section>
-        <section>
-          <h1>Micro SPA</h1>
+          <h3>What We Will Cover</h3>
           <ul>
-            <li class="fragment">Performs a singular business purpose</li>
-            <li class="fragment">Code base broken out into separate, distinct pieces</li>
-            <li class="fragment">Intended to work as part of a whole business solution, but can stand alone.</li>
+            <li class="fragment">Definitions (MicroSPA vs Monolith)</li>
+            <li class="fragment">Strengths/Weaknesses of Each</li>
+            <li class="fragment">Pain Points of MicroSPAs</li>
+            <li class="fragment">Nuts & Bolts</li>
+            <li class="fragment">Our Solution</li>
+            <li class="fragment">Problems to Solve</li>
           </ul>
         </section>
 
+<!-- definitions -->
+				<section>
+          <h1>Monoliths vs MicroSPAs</h1>
+				</section>
         <section>
-          <h1>MicroSPA vs Monolith Repos</h1>
-          <p>Using a generic E-Commerce site</p>
+          <h1>Monolith</h1>
+          <ul>
+            <li class="fragment">Single, large code base</li>
+            <li class="fragment">Many shared components</li>
+            <li class="fragment">Highly abstracted</li>
+          </ul>
+          <aside class="notes">
+            once a monolith is learned, it's typically super fast to code in
+          </aside>
         </section>
         <section>
-          <h2>Monolith Repos:</h2>
+          <h2>Sample Monolith Repos:</h2>
           <ul>
             <li>widgets_galore</li>
           </ul>
         </section>
         <section>
-          <h2>MicroSPA Repos:</h2>
+          <h1>MicroSPA</h1>
+          <ul>
+            <li class="fragment">Performs a singular business purpose</li>
+            <li class="fragment">Code base broken out into separate, distinct pieces</li>
+            <li class="fragment">Intended to work as part of a whole business solution, but can stand alone.</li>
+          </ul>
+          <aside class="notes">
+            typically js framework like angular, vue, react, etc
+          </aside>
+        </section>
+        <section>
+          <h2>Sample MicroSPA Repos:</h2>
           <ul>
             <li>widgets_galore_portal</li>
             <li>home_page</li>
@@ -146,6 +152,9 @@
         <section>
           <h1>Speed</h1>
           <h4>The strength of the Monolith</h4>
+          <aside class="notes">
+            speed = fast development.
+          </aside>
         </section>
         <section>
           <h2>Tons of reusable features</h2>
@@ -214,12 +223,12 @@
           <h2>Encourages Experimentation</h2>
           <p>Low-impact to try something in one MicroSPA</p>
           <aside class="notes">
-            <p>LOVE THIS</p>
+            <p>LOVE THIS - can play with new stuff.</p>
             <p>Hedges against stagnation and over-complicated internal frameworks</p>
           </aside>
         </section>
         <section>
-          <h2>Stay Abreast of new technology</h2>
+          <h2>Stay Abreast of new Technology</h2>
           <aside class="notes">
             <p>LOVE THIS.</p>
             <p>offshoot...</p>
@@ -259,6 +268,10 @@
         <section>
           <h2>No need for complex git methodologies<h2>
           <h4>Merge conflicts rare</h4>
+          <aside class="notes">
+            <p>feature/branching</p>
+            <p>"pulling a jessica" = push to master</p>
+          </aside>
         </section>
         <section>
           <h2>Specialization</h2>
@@ -274,11 +287,23 @@
           <h2>Adds Overhead</h2>
           <p>(To the first iteration)</p>
           <aside class="notes">
-            new tech takes a sec to figure out
+            <p>new tech takes a sec to figure out</p>
+            <p>typically about a week to get a new thing going</p>
           </aside>
         </section>
         <section>
           <h2>Tooling & OOTB Solutions are Rare</h2>
+          <aside class="notes">
+            the biggest problem being....
+          </aside>
+        </section>
+        <section>
+          <h2>How do they work together?</h2>
+          <aside class="notes">
+            <p>no OOTB solutions, tricky to figure out</p>
+            <p>The thing that really does require significant thought.</p>
+            <p>try to keep it open to any tech.</p>
+          </aside>
         </section>
         <section>
           <h2>Different Problems</h2>
@@ -286,6 +311,8 @@
           <aside class="notes">
             <p>eg: not abstracting everything.</p>
             <p>owning some code repetition</p>
+            <p>backwards compatability</p>
+            <p>progressive upgrades</p>
           </aside>
         </section>
         <section>
@@ -300,7 +327,15 @@
           <h2>Context Switching</h2>
           <p>can be rough</p>
           <aside class="notes">
-            GoTemplates to Vue.js to angular in a day... whew
+            <p>GoTemplates to Vue.js to angular in a day... whew.</p>
+            <p>the way code works so different</p>
+          </aside>
+        </section>
+        <section>
+          <h2>Knowledge Sharing*</h2>
+          <aside class="notes">
+            <p>Developers may not know a certain tool</p>
+            <p>*can be ok because it should be fairly simple code.</p>
           </aside>
         </section>
 <!-- Nuts & Bolts -->
@@ -309,15 +344,11 @@
         </section>
         <section>
           <h2>Build Something!</h2>
-        </section>
-        <section>
-          <h3>1. Pick a domain problem.</h3>
-        </section>
-        <section>
-          <h3>2. Build a simple SPA around it.</h3>
-        </section>
-        <section>
-          <h3>3. Repeat.</h3>
+          <ol>
+            <li class="fragment">Pick a domain problem.</li>
+            <li class="fragment">Build a simple SPA around it.</li>
+            <li class="fragment">Repeat.</li>
+          </ol>
         </section>
         <section>
           <h3>Train yourself to <b>NOT</b> abstract immediately.</h3>
@@ -345,6 +376,26 @@
           <p>As an example</p>
         </section>
         <section>
+          <h2>What our Team Does</h2>
+          <h3 class="fragment">Coupon Processing!</p>
+          <p class="fragment">Sounds easy, right?</p>
+          <aside class="notes">
+            <p>Sounds easy, right?</p>
+          </aside>
+        </section>
+        <section>
+          <h3>Client Apps (eg: Proctor & Gamble)</h3>
+          <img src="images/client_app.jpg">
+        </section>
+        <section>
+          <h3>Internal Apps (eg: accounting and money flow)</h3>
+          <img src="images/internal_app.jpg">
+        </section>
+        <section>
+          <h3>Developer Tools (eg: deployment & monitoring)</h3>
+          <img src="images/devops_app.jpg">
+        </section>
+        <section>
           <h2>Requirements</h2>
           <ol>
             <li class="fragment">Standalone Application</li>
@@ -355,7 +406,7 @@
         </section>
         <section>
           <h2>Shared Components</h2>
-          <p>Most MocroSPAs are required to contain these components:</p>
+          <p>Most MicroSPAs are required to contain these components:</p>
           <ul>
             <li>Navbar</li>
             <li>Stylesheet</li>
@@ -369,6 +420,9 @@
             <li>Namespaced</li>
             <li>Accepts configurations, especially of URLs</li>
           </ul>
+          <aside class="notes">
+            <p>window.inm</p>
+          </aside>
         </section>
         <section>
           <h2>MicroSPA Requirements</h2>
@@ -389,20 +443,26 @@
           </aside>
         </section>
         <section>
-          <h2>Build Process</h2>
+          <h2>Build/CI Process</h2>
           <ul>
             <li>Cloudformation file</li>
             <li>build file</li>
             <li>minimal, but powerful deployment tooling</li>
           </ul>
+          <aside class="notes">
+            <p>Not important, would work with monoliths too.</p>
+          </aside>
         </section>
         <section>
           <h2>Working Together</h2>
           <ul>
             <li><b>Turbolinks</b> for smooth transitions</li>
             <li><b>Consul</b> keys for URL rewrites</li>
-            <li>Shared parent config file</li>
+            <li>Shared parent <b>config.json</b> file</li>
           </ul>
+          <aside class="notes">
+            <p>turbolinks hijacks hrefs & converts to ajax, appears to be SPA</p>
+          </aside>
         </section>
 <!-- To solve -->
         <section>
